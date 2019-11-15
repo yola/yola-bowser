@@ -4,6 +4,5 @@
 export default {
   MOBILE: 'mobile',
   TABLET: 'tablet',
-  DESKTOP: 'desktop',
-  TV: 'tv',
+  DESKTOP: 'desktop'
 };

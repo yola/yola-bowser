@@ -6,8 +6,8 @@ module.exports = {
   overrides: [
     {
       files: ['src/**/*.spec.js'],
-      env: {
-        jasmine: true,
+      globals: {
+        jest: true,
       },
       rules: {
         'yola/import/no-webpack-loader-syntax': 'off',

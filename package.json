@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.js --mode production",
     "dev:watch": "webpack-dev-server --config ./webpack.sandbox.config.js",
-    "lint": "eslint ./src ./sandbox/src"
+    "lint": "eslint ./src ./sandbox/src",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -23,10 +25,12 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
+    "babel-jest": "^23.4.0",
     "eslint": "^4.18.0",
     "eslint-plugin-yola": "^1.0.3",
     "husky": "^0.14.3",
-    "inject-loader": "^4.0.1",
+    "jest": "^23.4.1",
+    "jest-cli": "^23.4.1",
     "lint-staged": "^7.0.0",
     "prettier": "^1.18.2",
     "webpack-dev-server": "^3.1.14",

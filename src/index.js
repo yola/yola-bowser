@@ -16,7 +16,7 @@ export default {
 
   // OS flags
   android: osUtils.isAndroid(parser),
-  ios: osUtils.isIOS(parser),
+  ios: osUtils.isIOS(parser) || osUtils.isIpadOS(parser),
   iPadOS: osUtils.isIpadOS(parser),
   linux: osUtils.isLinux(parser),
   macOS: osUtils.isMacOS(parser) && !osUtils.isIpadOS(parser),
