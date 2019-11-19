@@ -34,105 +34,133 @@ describe('yola-bowser: ', () => {
   });
 
   describe('Browser flags', () => {
-    it('chrome', () => {
-      yolaBowser = setup({
-        browser: browserTypes.CHROME
+    describe('chrome', () => {
+      it('should return true if browser is Chrome', () => {
+        yolaBowser = setup({ browser: browserTypes.CHROME });
+        expect(yolaBowser.chrome).toEqual(true);
       });
-      expect(yolaBowser.chrome).toEqual(true);
     });
 
-    it('edge', () => {
-      yolaBowser = setup({ browser: browserTypes.EDGE });
-      expect(yolaBowser.edge).toEqual(true);
+    describe('edge', () => {
+      it('should return true if browser is Edge', () => {
+        yolaBowser = setup({ browser: browserTypes.EDGE });
+        expect(yolaBowser.edge).toEqual(true);
+      });
     });
 
-    it('firefox', () => {
-      yolaBowser = setup({ browser: browserTypes.FIREFOX });
-      expect(yolaBowser.firefox).toEqual(true);
+    describe('firefox', () => {
+      it('should return true if browser is Firefox', () => {
+        yolaBowser = setup({ browser: browserTypes.FIREFOX });
+        expect(yolaBowser.firefox).toEqual(true);
+      });
     });
 
-    it('ie', () => {
-      yolaBowser = setup({ browser: browserTypes.IE });
-      expect(yolaBowser.ie).toEqual(true);
+    describe('ie', () => {
+      it('should return true if browser is IE', () => {
+        yolaBowser = setup({ browser: browserTypes.IE });
+        expect(yolaBowser.ie).toEqual(true);
+      });
     });
 
-    it('opera', () => {
-      yolaBowser = setup({ browser: browserTypes.OPERA });
-      expect(yolaBowser.opera).toEqual(true);
+    describe('opera', () => {
+      it('should return true if browser is Opera', () => {
+        yolaBowser = setup({ browser: browserTypes.OPERA });
+        expect(yolaBowser.opera).toEqual(true);
+      });
     });
 
-    it('safari', () => {
-      yolaBowser = setup({ browser: browserTypes.SAFARI });
-      expect(yolaBowser.safari).toEqual(true);
+    describe('safari', () => {
+      it('should return true if browser is Safari', () => {
+        yolaBowser = setup({ browser: browserTypes.SAFARI });
+        expect(yolaBowser.safari).toEqual(true);
+      });
     });
   });
 
   describe('OS flags', () => {
-    it('android', () => {
-      yolaBowser = setup({ os: osTypes.ANDROID });
-      expect(yolaBowser.android).toEqual(true);
+    describe('android', () => {
+      it('should return true if OS is Android', () => {
+        yolaBowser = setup({ os: osTypes.ANDROID });
+        expect(yolaBowser.android).toEqual(true);
+      });
     });
 
-    it('iOS: should be set if OS is actually iOS', () => {
-      yolaBowser = setup({ os: osTypes.IOS });
-      expect(yolaBowser.ios).toEqual(true);
+    describe('ios', () => {
+      it('should return true if OS is actually iOS', () => {
+        yolaBowser = setup({ os: osTypes.IOS });
+        expect(yolaBowser.ios).toEqual(true);
+      });
+
+      it('should also return true if OS is the iPad OS', () => {
+        setMaxTouchPoints(2);
+        yolaBowser = setup({ os: osTypes.MACOS });
+        expect(yolaBowser.ios).toEqual(true);
+      });
     });
 
-    it('iOS: should be set if OS is the iPad OS', () => {
-      setMaxTouchPoints(2);
-      yolaBowser = setup({ os: osTypes.MACOS });
-      expect(yolaBowser.ios).toEqual(true);
+    describe('iPadOS', () => {
+      it('should also return true if OS is macOS and maxTouchPoints is > 1', () => {
+        setMaxTouchPoints(2);
+        yolaBowser = setup({ os: osTypes.MACOS });
+        expect(yolaBowser.iPadOS).toEqual(true);
+      });
     });
 
-    it('iPad OS', () => {
-      setMaxTouchPoints(2);
-      yolaBowser = setup({ os: osTypes.MACOS });
-      expect(yolaBowser.iPadOS).toEqual(true);
+    describe('linux', () => {
+      it('should return true if OS is linux', () => {
+        yolaBowser = setup({ os: osTypes.LINUX });
+        expect(yolaBowser.linux).toEqual(true);
+      });
     });
 
-    it('linux', () => {
-      yolaBowser = setup({ os: osTypes.LINUX });
-      expect(yolaBowser.linux).toEqual(true);
+    describe('macOS', () => {
+      it('should also return true if OS is macOSand maxTouchPoints is < 2', () => {
+        setMaxTouchPoints(1);
+        yolaBowser = setup({ os: osTypes.MACOS });
+        expect(yolaBowser.macOS).toEqual(true);
+      });
+
+      it('should also return false if OS is macOS and maxTouchPoints is > 1', () => {
+        setMaxTouchPoints(2);
+        yolaBowser = setup({ os: osTypes.MACOS });
+        expect(yolaBowser.macOS).toEqual(false);
+      });
     });
 
-    it('macOS', () => {
-      setMaxTouchPoints(1);
-      yolaBowser = setup({ os: osTypes.MACOS });
-      expect(yolaBowser.macOS).toEqual(true);
-    });
-
-    it('macOS: should not be confused with iPad OS', () => {
-      setMaxTouchPoints(2);
-      yolaBowser = setup({ os: osTypes.MACOS });
-      expect(yolaBowser.macOS).toEqual(false);
-    });
-
-    it('windows', () => {
-      yolaBowser = setup({ os: osTypes.WINDOWS });
-      expect(yolaBowser.windows).toEqual(true);
+    describe('windows', () => {
+      it('should return true if OS is windows', () => {
+        yolaBowser = setup({ os: osTypes.WINDOWS });
+        expect(yolaBowser.windows).toEqual(true);
+      });
     });
   });
 
   describe('Platform flags', () => {
-    it('mobile', () => {
-      yolaBowser = setup({ platform: platformTypes.MOBILE });
-      expect(yolaBowser.mobile).toEqual(true);
+    describe('mobile', () => {
+      it('should return true if platform is Mobile', () => {
+        yolaBowser = setup({ platform: platformTypes.MOBILE });
+        expect(yolaBowser.mobile).toEqual(true);
+      });
     });
 
-    it('tablet', () => {
-      yolaBowser = setup({ platform: platformTypes.TABLET });
-      expect(yolaBowser.tablet).toEqual(true);
+    describe('tablet', () => {
+      it('should return true if platform is Tablet', () => {
+        yolaBowser = setup({ platform: platformTypes.TABLET });
+        expect(yolaBowser.tablet).toEqual(true);
+      });
+
+      it('should return true if it is the iPad OS', () => {
+        setMaxTouchPoints(2);
+        yolaBowser = setup({ os: osTypes.MACOS });
+        expect(yolaBowser.tablet).toEqual(true);
+      });
     });
 
-    it('tablet: should be set if it is iPad OS', () => {
-      setMaxTouchPoints(2);
-      yolaBowser = setup({ os: osTypes.MACOS });
-      expect(yolaBowser.tablet).toEqual(true);
-    });
-
-    it('desktop', () => {
-      yolaBowser = setup({ platform: platformTypes.DESKTOP });
-      expect(yolaBowser.desktop).toEqual(true);
+    describe('desktop', () => {
+      it('should return true if platform is Desktop', () => {
+        yolaBowser = setup({ platform: platformTypes.DESKTOP });
+        expect(yolaBowser.desktop).toEqual(true);
+      });
     });
   });
 });

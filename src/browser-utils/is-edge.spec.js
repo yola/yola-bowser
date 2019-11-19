@@ -5,11 +5,20 @@ const getParserMock = (browserName) => ({
   getBrowserName: jest.fn(() => browserName)
 });
 
-describe('Browser utils: ', () => {
-  it('is Edge?', () => {
-    const mock = getParserMock(browserTypes.EDGE);
-    expect(isEdge(mock)).toEqual(true);
-    expect(mock.getBrowserName).toHaveBeenCalled();
-    expect(isEdge(getParserMock('not exist'))).toEqual(false);
+describe('isEdge', () => {
+  describe('when browser is Edge', () => {
+    it('should return true', () => {
+      const mock = getParserMock(browserTypes.EDGE);
+      expect(isEdge(mock)).toEqual(true);
+      expect(mock.getBrowserName).toHaveBeenCalled();
+    });
+  });
+
+  describe('when browser is not Edge', () => {
+    it('should return false', () => {
+      const mock = getParserMock(browserTypes.SAFARI);
+      expect(isEdge(mock)).toEqual(false);
+      expect(mock.getBrowserName).toHaveBeenCalled();
+    });
   });
 });

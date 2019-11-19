@@ -5,11 +5,20 @@ const getParserMock = (platformType) => ({
   getPlatformType: jest.fn(() => platformType)
 });
 
-describe('Platform utils: ', () => {
-  it('is Desktop?', () => {
-    const mock = getParserMock(platformTypes.DESKTOP);
-    expect(isDesktop(mock)).toEqual(true);
-    expect(mock.getPlatformType).toHaveBeenCalled();
-    expect(isDesktop(getParserMock('not exist'))).toEqual(false);
+describe('isDesktop', () => {
+  describe('when platform is Desktop', () => {
+    it('should return true', () => {
+      const mock = getParserMock(platformTypes.DESKTOP);
+      expect(isDesktop(mock)).toEqual(true);
+      expect(mock.getPlatformType).toHaveBeenCalled();
+    });
+  });
+
+  describe('when platform is not Desktop', () => {
+    it('should return false', () => {
+      const mock = getParserMock(platformTypes.TABLET);
+      expect(isDesktop(mock)).toEqual(false);
+      expect(mock.getPlatformType).toHaveBeenCalled();
+    });
   });
 });

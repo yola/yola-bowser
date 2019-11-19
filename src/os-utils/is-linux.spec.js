@@ -5,11 +5,20 @@ const getParserMock = (osName) => ({
   getOSName: jest.fn(() => osName)
 });
 
-describe('OS utils: ', () => {
-  it('is Linux?', () => {
-    const mock = getParserMock(osTypes.LINUX);
-    expect(isLinux(mock)).toEqual(true);
-    expect(mock.getOSName).toHaveBeenCalled();
-    expect(isLinux(getParserMock('not exist'))).toEqual(false);
+describe('isLinux', () => {
+  describe('when OS is Linux', () => {
+    it('should return true', () => {
+      const mock = getParserMock(osTypes.LINUX);
+      expect(isLinux(mock)).toEqual(true);
+      expect(mock.getOSName).toHaveBeenCalled();
+    });
+  });
+
+  describe('when OS is not Linux', () => {
+    it('should return false', () => {
+      const mock = getParserMock(osTypes.WINDOWS);
+      expect(isLinux(mock)).toEqual(false);
+      expect(mock.getOSName).toHaveBeenCalled();
+    });
   });
 });

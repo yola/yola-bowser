@@ -5,11 +5,20 @@ const getParserMock = (browserName) => ({
   getBrowserName: jest.fn(() => browserName)
 });
 
-describe('Browser utils: ', () => {
-  it('is Opera?', () => {
-    const mock = getParserMock(browserTypes.OPERA);
-    expect(isOpera(mock)).toEqual(true);
-    expect(mock.getBrowserName).toHaveBeenCalled();
-    expect(isOpera(getParserMock('not exist'))).toEqual(false);
+describe('isOpera', () => {
+  describe('when browser is Opera', () => {
+    it('should return true', () => {
+      const mock = getParserMock(browserTypes.OPERA);
+      expect(isOpera(mock)).toEqual(true);
+      expect(mock.getBrowserName).toHaveBeenCalled();
+    });
+  });
+
+  describe('when browser is not Opera', () => {
+    it('should return false', () => {
+      const mock = getParserMock(browserTypes.SAFARI);
+      expect(isOpera(mock)).toEqual(false);
+      expect(mock.getBrowserName).toHaveBeenCalled();
+    });
   });
 });

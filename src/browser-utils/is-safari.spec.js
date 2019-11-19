@@ -5,11 +5,20 @@ const getParserMock = (browserName) => ({
   getBrowserName: jest.fn(() => browserName)
 });
 
-describe('Browser utils: ', () => {
-  it('is Safari?', () => {
-    const mock = getParserMock(browserTypes.SAFARI);
-    expect(isSafari(mock)).toEqual(true);
-    expect(mock.getBrowserName).toHaveBeenCalled();
-    expect(isSafari(getParserMock('not exist'))).toEqual(false);
+describe('isSafari', () => {
+  describe('when browser is Safari', () => {
+    it('should return true', () => {
+      const mock = getParserMock(browserTypes.SAFARI);
+      expect(isSafari(mock)).toEqual(true);
+      expect(mock.getBrowserName).toHaveBeenCalled();
+    });
+  });
+
+  describe('when browser is not Safari', () => {
+    it('should return false', () => {
+      const mock = getParserMock(browserTypes.CHROME);
+      expect(isSafari(mock)).toEqual(false);
+      expect(mock.getBrowserName).toHaveBeenCalled();
+    });
   });
 });
