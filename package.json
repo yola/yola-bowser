@@ -1,6 +1,6 @@
 {
   "name": "yola-bowser",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Wrapper for bowser library with a custom API",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "dev:watch": "webpack-dev-server --config ./webpack.sandbox.config.js",
     "lint": "eslint ./src ./sandbox/src",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublishOnly": "NODE_ENV=production npm run build"
   },
   "repository": {
     "type": "git",
