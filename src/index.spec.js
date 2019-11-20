@@ -90,12 +90,6 @@ describe('yola-bowser: ', () => {
         yolaBowser = setup({ os: osTypes.IOS });
         expect(yolaBowser.ios).toEqual(true);
       });
-
-      it('should also return true if OS is the iPad OS', () => {
-        setMaxTouchPoints(2);
-        yolaBowser = setup({ os: osTypes.MACOS });
-        expect(yolaBowser.ios).toEqual(true);
-      });
     });
 
     describe('iPadOS', () => {

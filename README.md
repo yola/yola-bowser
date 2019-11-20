@@ -27,7 +27,7 @@ const isMobile = yolaBowser.mobile;
 
 ### OS flags:
 * `android`
-* `ios` - All Apple touch devices including the new iPad OS.
+* `ios`
 * `iPadOS` - Separate flag for the new iPad OS.
 * `linux`
 * `macOS` - Desktop Mac, but not the new iPad OS.
