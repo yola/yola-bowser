@@ -41,6 +41,13 @@ describe('yola-bowser: ', () => {
       });
     });
 
+    describe('chromium', () => {
+      it('should return true if browser is Chromium', () => {
+        yolaBowser = setup({ browser: browserTypes.CHROMIUM });
+        expect(yolaBowser.chromium).toEqual(true);
+      });
+    });
+
     describe('edge', () => {
       it('should return true if browser is Edge', () => {
         yolaBowser = setup({ browser: browserTypes.EDGE });

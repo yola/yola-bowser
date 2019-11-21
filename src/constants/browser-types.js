@@ -3,6 +3,7 @@
 
 export default {
   CHROME: 'Chrome',
+  CHROMIUM: 'Chromium',
   EDGE: 'Microsoft Edge',
   FIREFOX: 'Firefox',
   IE: 'Internet Explorer',

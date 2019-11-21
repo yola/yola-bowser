@@ -8,6 +8,7 @@ const parser = Bowser.getParser(window.navigator.userAgent || '');
 export default {
   // Browser flags
   chrome: browserUtils.isChrome(parser),
+  chromium: browserUtils.isChromium(parser),
   edge: browserUtils.isEdge(parser),
   firefox: browserUtils.isFirefox(parser),
   ie: browserUtils.isIE(parser),
