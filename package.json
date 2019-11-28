@@ -1,6 +1,6 @@
 {
   "name": "yola-bowser",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.6",
   "description": "Wrapper for bowser library with a custom API",
   "main": "dist/index.js",
   "scripts": {
@@ -23,10 +23,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-json-strings": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.4.2",
