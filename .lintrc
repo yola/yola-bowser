@@ -1,0 +1,6 @@
+[tools]
+linters = eslint
+
+[tool_eslint]
+config = ./.eslintrc.js
+
