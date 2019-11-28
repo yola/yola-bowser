@@ -19,6 +19,7 @@ const isMobile = yolaBowser.mobile;
 
 ### Browser flags:
 * `chrome`
+* `chromium`
 * `edge`
 * `firefox`
 * `ie`
