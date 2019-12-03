@@ -1,4 +1,4 @@
-import Bowser from 'bowser/bundled';
+import Bowser from 'bowser';
 import browserUtils from './browser-utils';
 import osUtils from './os-utils';
 import platformUtils from './platform-utils';
