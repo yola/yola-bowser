@@ -1,6 +1,6 @@
 # yola-bowser
 
-The library that helps to detect platform/OS/browser and other useful information available from `window.navigator.userAgent`. It relies on the [Bowser] (https://github.com/lancedikson/bowser) version 2+, and provides a custom API which based on boolean flags. Library do not include any polyfills.
+The library that helps to detect platform/OS/browser and other useful information available from `window.navigator.userAgent`. It relies on the [Bowser] (https://github.com/lancedikson/bowser) version 2+, and provides a custom API which based on boolean flags. Library does not include any polyfills.
 
 ## `yola-bowser` usage:
 

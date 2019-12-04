@@ -1,4 +1,4 @@
-## 1.0.1-rc.1
+## 1.0.1
 
 `Bowser` ES5 transpiled version without any polyfills is used.
 
