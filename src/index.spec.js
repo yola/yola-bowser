@@ -12,7 +12,7 @@ const getBowserMock = ({ browser, os, platform }) => ({
 
 const setup = ({ browser, os, platform }) => {
   const mockBowser = getBowserMock({ browser, os, platform });
-  jest.mock('bowser/bundled', () => mockBowser);
+  jest.mock('bowser', () => mockBowser);
 
   // eslint-disable-next-line global-require
   return require('../src').default;

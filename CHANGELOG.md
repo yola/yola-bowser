@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Remove babel-polyfill from bundle.
+
 ## 1.0.0
 
 Initial release with following API
