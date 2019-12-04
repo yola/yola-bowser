@@ -1,6 +1,6 @@
 ## 1.0.1
 
-`Bowser` ES5 transpiled version without any polyfills is used.
+- Remove babel-polyfill from bundle.
 
 ## 1.0.0
 
