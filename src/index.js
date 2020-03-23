@@ -2,6 +2,7 @@ import Bowser from 'bowser';
 import browserUtils from './browser-utils';
 import osUtils from './os-utils';
 import platformUtils from './platform-utils';
+import generalUtils from './general-utils';
 
 const parser = Bowser.getParser(window.navigator.userAgent || '');
 
@@ -27,4 +28,7 @@ export default {
   mobile: platformUtils.isMobile(parser),
   tablet: platformUtils.isTablet(parser) || osUtils.isIpadOS(parser),
   desktop: platformUtils.isDesktop(parser) && !osUtils.isIpadOS(parser),
+
+  // General utils
+  version: generalUtils.getVersion(parser),
 };

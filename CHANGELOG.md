@@ -1,3 +1,8 @@
+## 1.0.2
+
+- Add general utils
+- Add version of OS
+
 ## 1.0.1
 
 - Remove babel-polyfill from bundle.
