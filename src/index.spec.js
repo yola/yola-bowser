@@ -2,16 +2,17 @@ import browserTypes from './constants/browser-types';
 import osTypes from './constants/os-types';
 import platformTypes from './constants/platform-types';
 
-const getBowserMock = ({ browser, os, platform }) => ({
+const getBowserMock = ({ browser, os, platform, version }) => ({
   getParser: jest.fn(() => ({
     getBrowserName: jest.fn(() => browser),
     getOSName: jest.fn(() => os),
     getPlatformType: jest.fn(() => platform),
+    getOSVersion: jest.fn(() => version),
   }))
-})
+});
 
-const setup = ({ browser, os, platform }) => {
-  const mockBowser = getBowserMock({ browser, os, platform });
+const setup = ({ browser, os, platform, version }) => {
+  const mockBowser = getBowserMock({ browser, os, platform, version });
   jest.mock('bowser', () => mockBowser);
 
   // eslint-disable-next-line global-require
@@ -164,4 +165,12 @@ describe('yola-bowser: ', () => {
       });
     });
   });
+  describe('General Utils', () => {
+    describe('version', () => {
+      it('should return version of OS', () => {
+        yolaBowser = setup({ version: '12.2.1' });
+        expect(yolaBowser.version).toEqual('12.2.1');
+      });
+    });
+  })
 });
