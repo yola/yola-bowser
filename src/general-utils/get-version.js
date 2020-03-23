@@ -1,5 +1,3 @@
-const getVersion = (parser) => {
-  return parser.getOSVersion();
-};
+const getVersion = (parser) => parser.getOSVersion();
 
 export default getVersion;
