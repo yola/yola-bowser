@@ -31,4 +31,5 @@ export default {
 
   // General utils
   version: generalUtils.getVersion(parser),
+  satisfies: parser.satisfies,
 };

@@ -1,3 +1,7 @@
+## 1.2.0
+
+- export `satisfies` method
+
 ## 1.0.2
 
 - Add general utils
