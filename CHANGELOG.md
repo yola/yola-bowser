@@ -1,3 +1,8 @@
+## 1.1.1
+
+- fix of `satisfies` method
+- add proxy `isSatisfied`
+
 ## 1.1.0
 
 - export `satisfies` method
