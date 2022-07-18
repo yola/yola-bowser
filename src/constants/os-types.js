@@ -7,4 +7,5 @@ export default {
   LINUX: 'Linux',
   MACOS: 'macOS',
   WINDOWS: 'Windows',
+  CHROME_OS: 'Chrome OS',
 };

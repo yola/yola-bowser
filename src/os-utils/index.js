@@ -4,6 +4,7 @@ import isIpadOS from './is-ipad-os';
 import isLinux from './is-linux';
 import isMacOS from './is-macos';
 import isWindows from './is-windows';
+import isChromeOS from './is-chrome-os';
 
 export default {
   isAndroid,
@@ -12,4 +13,5 @@ export default {
   isLinux,
   isMacOS,
   isWindows,
+  isChromeOS
 };
