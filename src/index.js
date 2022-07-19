@@ -23,6 +23,7 @@ export default {
   linux: osUtils.isLinux(parser),
   macOS: osUtils.isMacOS(parser) && !osUtils.isIpadOS(parser),
   windows: osUtils.isWindows(parser),
+  chromeOS: osUtils.isChromeOS(parser),
 
   // Platform flags
   mobile: platformUtils.isMobile(parser),

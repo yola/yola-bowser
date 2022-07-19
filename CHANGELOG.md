@@ -1,3 +1,7 @@
+## 1.2.0
+
+- add `isChromeOS` os-util
+
 ## 1.1.1
 
 - fix of `satisfies` method
