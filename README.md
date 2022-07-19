@@ -33,6 +33,7 @@ const isMobile = yolaBowser.mobile;
 * `linux`
 * `macOS` - Desktop Mac, but not the new iPad OS.
 * `windows`
+* `chromeOS`
 
 ### Platform flags:
 * `mobile` - All detected mobile OSes, unless it's a tablet.
