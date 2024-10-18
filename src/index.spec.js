@@ -28,6 +28,17 @@ const setMaxTouchPoints = (n) => {
 
 describe('yola-bowser: ', () => {
   let yolaBowser;
+  let globalNavigator;
+
+  beforeAll(() => {
+    globalNavigator = global.navigator;
+
+    global.navigator = {};
+  });
+
+  afterAll(() => {
+    global.navigator = globalNavigator;
+  });
 
   beforeEach(() => {
     jest.resetModules();
