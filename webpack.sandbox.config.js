@@ -5,8 +5,10 @@ const mode = process.env.NODE_ENV || 'development';
 module.exports = {
   mode,
   devServer: {
-    contentBase: path.join(__dirname, 'sandbox'),
-    watchContentBase: true,
+    static: {
+      directory: path.join(__dirname, 'sandbox'),
+    },
+    watchFiles: ['sandbox/**/*'],
     compress: true,
     open: true,
     hot: true,
