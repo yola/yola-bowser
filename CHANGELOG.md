@@ -1,3 +1,7 @@
+## 1.2.1
+
+- update `bowser` to 2.11.0
+
 ## 1.2.0
 
 - add `isChromeOS` os-util
