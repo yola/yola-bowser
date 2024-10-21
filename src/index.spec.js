@@ -8,7 +8,7 @@ const getBowserMock = ({ browser, os, platform, version }) => ({
     getOSName: jest.fn(() => os),
     getPlatformType: jest.fn(() => platform),
     getOSVersion: jest.fn(() => version),
-  }))
+  })),
 });
 
 const setup = ({ browser, os, platform, version }) => {
@@ -22,7 +22,7 @@ const setup = ({ browser, os, platform, version }) => {
 const setMaxTouchPoints = (n) => {
   Object.defineProperty(global.navigator, 'maxTouchPoints', {
     configurable: true,
-    get: jest.fn().mockImplementation(() => n)
+    get: jest.fn().mockImplementation(() => n),
   });
 };
 
@@ -183,5 +183,5 @@ describe('yola-bowser: ', () => {
         expect(yolaBowser.version).toEqual('12.2.1');
       });
     });
-  })
+  });
 });

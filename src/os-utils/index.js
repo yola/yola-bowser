@@ -13,5 +13,5 @@ export default {
   isLinux,
   isMacOS,
   isWindows,
-  isChromeOS
+  isChromeOS,
 };

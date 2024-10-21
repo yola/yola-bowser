@@ -1,14 +1,14 @@
-import osTypes from '../constants/os-types'
+import osTypes from '../constants/os-types';
 import isIpadOS from './is-ipad-os';
 
 const getParserMock = (osName) => ({
-  getOSName: jest.fn(() => osName)
+  getOSName: jest.fn(() => osName),
 });
 
 const setMaxTouchPoints = (n) => {
   Object.defineProperty(global.navigator, 'maxTouchPoints', {
     configurable: true,
-    get: jest.fn().mockImplementation(() => n)
+    get: jest.fn().mockImplementation(() => n),
   });
 };
 

@@ -1,7 +1,7 @@
 import getVersion from './get-version';
-import isSatisfied from './is-satisfied'
+import isSatisfied from './is-satisfied';
 
 export default {
   getVersion,
-  isSatisfied
-}
+  isSatisfied,
+};
