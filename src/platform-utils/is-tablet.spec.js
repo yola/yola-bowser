@@ -1,8 +1,8 @@
-import platformTypes from '../constants/platform-types'
+import platformTypes from '../constants/platform-types';
 import isTablet from './is-tablet';
 
 const getParserMock = (platformType) => ({
-  getPlatformType: jest.fn(() => platformType)
+  getPlatformType: jest.fn(() => platformType),
 });
 
 describe('isTablet', () => {

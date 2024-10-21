@@ -1,7 +1,7 @@
 import isSatisfied from './is-satisfied';
 
 const getParserMock = () => ({
-  satisfies: jest.fn((params) => params)
+  satisfies: jest.fn((params) => params),
 });
 
 describe('isSatisfied', () => {

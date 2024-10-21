@@ -1,7 +1,7 @@
 import getVersion from './get-version.js';
 
 const getParserMock = () => ({
-  getOSVersion: jest.fn(() => 12)
+  getOSVersion: jest.fn(() => 12),
 });
 
 describe('getVersion', () => {

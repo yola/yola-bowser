@@ -1,3 +1,7 @@
+## 1.2.1
+
+- update `bowser` to 2.11.0 version
+
 ## 1.2.0
 
 - add `isChromeOS` os-util
@@ -25,6 +29,7 @@
 Initial release with following API
 
 Browser flags:
+
 - `chrome`
 - `firefox`
 - `edge`
@@ -33,6 +38,7 @@ Browser flags:
 - `safari`
 
 OS flags:
+
 - `android`
 - `ios`
 - `iPadOS`
@@ -41,6 +47,7 @@ OS flags:
 - `windows`
 
 Platform flags:
+
 - `mobile`
 - `tablet`
 - `desktop`

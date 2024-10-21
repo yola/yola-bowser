@@ -1,8 +1,8 @@
-import browserTypes from '../constants/browser-types'
+import browserTypes from '../constants/browser-types';
 import isChromium from './is-chromium';
 
 const getParserMock = (browserName) => ({
-  getBrowserName: jest.fn(() => browserName)
+  getBrowserName: jest.fn(() => browserName),
 });
 
 describe('isChromium', () => {

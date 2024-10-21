@@ -1,8 +1,8 @@
-import osTypes from '../constants/os-types'
+import osTypes from '../constants/os-types';
 import isAndroid from './is-android';
 
 const getParserMock = (osName) => ({
-  getOSName: jest.fn(() => osName)
+  getOSName: jest.fn(() => osName),
 });
 
 describe('isAndroid', () => {

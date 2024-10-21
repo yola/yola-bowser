@@ -1,15 +1,16 @@
 {
   "name": "yola-bowser",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Wrapper for bowser library with a custom API",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config ./webpack.config.js --mode production",
     "dev:watch": "webpack-dev-server --config ./webpack.sandbox.config.js",
-    "lint": "eslint ./src ./sandbox/src",
+    "lint": "eslint ./src ./sandbox",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "prepublishOnly": "NODE_ENV=production npm run build"
+    "prepublishOnly": "NODE_ENV=production npm run build",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,25 +20,25 @@
   "license": "UNLICENSED",
   "homepage": "https://https://github.com/yola/yola-bowser#readme",
   "dependencies": {
-    "bowser": "^2.7.0"
+    "bowser": "^2.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
-    "babel-loader": "^8.0.0",
-    "eslint": "^4.18.0",
-    "eslint-plugin-yola": "^1.0.3",
-    "husky": "^0.14.3",
-    "jest": "^23.4.1",
-    "jest-cli": "^23.4.1",
-    "lint-staged": "^7.0.0",
-    "prettier": "^1.18.2",
-    "source-map-loader": "^0.2.3",
-    "webpack": "^4.20.0",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.14"
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^8.4.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-yola": "^2.1.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^12.5.0",
+    "prettier": "^3.0.0",
+    "source-map-loader": "^5.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "husky": {
     "hooks": {
