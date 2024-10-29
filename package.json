@@ -1,6 +1,6 @@
 {
   "name": "yola-bowser",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Wrapper for bowser library with a custom API",
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/yola/yola-bowser.git"
   },
   "author": "Yola Engineering <engineers@yola.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://https://github.com/yola/yola-bowser#readme",
   "dependencies": {
     "bowser": "^2.11.0"
