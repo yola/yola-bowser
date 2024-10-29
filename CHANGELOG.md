@@ -1,3 +1,7 @@
+## 1.2.2
+
+- add MIT license disclaimer
+
 ## 1.2.1
 
 - update `bowser` to 2.11.0 version
